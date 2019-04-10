@@ -18,6 +18,9 @@ public class UI extends PApplet
 		println(ones);
 	}
 
+	ArrayList<Colour> colours = new ArrayList<Colour>();
+	
+
 	public void settings()
 	{
 		size(500, 800);
