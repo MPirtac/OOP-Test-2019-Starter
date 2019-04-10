@@ -19,7 +19,7 @@ public class UI extends PApplet
 	}
 
 	ArrayList<Colour> colours = new ArrayList<Colour>();
-	
+
 
 	public void settings()
 	{
@@ -30,8 +30,19 @@ public class UI extends PApplet
 		separate(92);
 	}
 
+	public void loadColours()
+	{
+		Table table = loadTable("colours.csv", "header");
+		for(TableRow row: table.rows())
+		{
+			Colour c = new Colour(row); 
+			colours.add(c);
+		}
+	}
+
 	public void setup() 
 	{
+		loadColours();
 	}
 	
 	public void draw()
